@@ -46,7 +46,6 @@ function agregators () {
   let text = '';
   let procent = 0;
   if (yaChe.value == 0 && delChe.value == 0 && svoyaChe.value == 0) {
-    console.log('asd')
     text += 0;
   } else {
     if (yaChe.value > 0) {
@@ -92,6 +91,11 @@ function manG () {
 }
 
 function sms () {
+  const bkDat = new Date('September 11, 2018');
+  const date = new Date();
+  const bkYear = parseInt((date - bkDat) / 1000 / 60 / 60 / 24 / 365);
+  const bkMonth = parseInt((date - bkDat) / 1000 / 60 / 60 / 24 / 31 - 3);
+  console.log(bkYear, bkMonth)
   const inRes = restoran();
   const keyT= keytering();
   const agrE = agregators();
@@ -99,7 +103,7 @@ function sms () {
   const manager = manG();
   textArea.textContent += '*Добрый вечер!*\n';
   textArea.textContent += '\n';
-  textArea.textContent += `*Отчёт по выручке ОМ ЦДМ за 25.09.2022*\n`;
+  textArea.textContent += `*Отчёт по выручке ОМ ЦДМ за ${new Intl.DateTimeFormat().format(date)}*\n`;
   textArea.textContent += '\n';
 
   textArea.textContent += `*Утро:* ${new Intl.NumberFormat("ru", {style: "currency", currency: "RUB", minimumFractionDigits: 0}).format(utro.value)}\n`;
@@ -116,12 +120,12 @@ function sms () {
 
   textArea.textContent += '\n';
   /*
-  textArea.textContent += `*Дельта к БК 4 год (44):* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(bkS.value)}\n`;
+  textArea.textContent += `*Дельта к БК ${bkYear} год (${bkMonth}):* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(bkS.value)}\n`;
   textArea.textContent += `*SSS(21) Day:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(dayS.value)}\n`;
   textArea.textContent += `*SSS(21) Week:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(weekS.value)}\n`;
   textArea.textContent += `*SSS(21) Month:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(monthS.value)}\n`;
   */
-  textArea.textContent += `*Дельта к БК 4 год (44):* ${bkS.value} %\n`;
+  textArea.textContent += `*Дельта к БК ${bkYear} год (${bkMonth}):* ${bkS.value} %\n`;
   textArea.textContent += `*SSS(21) Day:* ${dayS.value} %\n`;
   textArea.textContent += `*SSS(21) Week:* ${weekS.value} %\n`;
   textArea.textContent += `*SSS(21) Month:* ${monthS.value} %\n`;
