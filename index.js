@@ -119,16 +119,11 @@ function sms () {
   textArea.textContent += `*Алкоголь:* ${alko}\n`;
 
   textArea.textContent += '\n';
-  /*
-  textArea.textContent += `*Дельта к БК ${bkYear} год (${bkMonth}):* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(bkS.value)}\n`;
-  textArea.textContent += `*SSS(21) Day:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(dayS.value)}\n`;
-  textArea.textContent += `*SSS(21) Week:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(weekS.value)}\n`;
-  textArea.textContent += `*SSS(21) Month:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(monthS.value)}\n`;
-  */
-  textArea.textContent += `*Дельта к БК ${bkYear} год (${bkMonth}):* ${bkS.value} %\n`;
-  textArea.textContent += `*SSS(21) Day:* ${dayS.value} %\n`;
-  textArea.textContent += `*SSS(21) Week:* ${weekS.value} %\n`;
-  textArea.textContent += `*SSS(21) Month:* ${monthS.value} %\n`;
+
+  textArea.textContent += `*Дельта к БК ${bkYear} год (${bkMonth}):* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(bkS.value/100)}\n`;
+  textArea.textContent += `*SSS(21) Day:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(dayS.value/100)}\n`;
+  textArea.textContent += `*SSS(21) Week:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(weekS.value/100)}\n`;
+  textArea.textContent += `*SSS(21) Month:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(monthS.value/100)}\n`;
 
   textArea.textContent += '\n';
   textArea.textContent += `С уважением, ${manager}`
