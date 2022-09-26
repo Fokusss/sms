@@ -16,7 +16,7 @@
 }
 
 .title {
-  margin: 20px 0 10px 0;
+  margin: 15px 0 10px 0;
   font-size: 28px;
   font-weight: 700;
   text-align: center;
@@ -28,14 +28,23 @@
 
 .form__text {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 100px 200px;
+  grid-auto-rows: 24px;
   gap: 10px 0;
 }
 
 .input__text {
   width: 200px;
-  margin-left: 3px;
+  border-radius: 5px;
+  border: none;
+  font-size: 22px;
 }
+
+.input__text:focus {
+  outline: none;
+  border: 3px solid #4e457d;
+}
+
 
 
 .mang {
@@ -53,5 +62,5 @@
 
 .label {
   font-weight: 700;
-
+  font-size: 20px;
 }
