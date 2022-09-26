@@ -20,6 +20,7 @@ const weekS = document.querySelector('#weekS');
 const monthS = document.querySelector('#monthS');
 const bkS = document.querySelector('#bkS');
 const manGS = document.querySelector('#manGS');
+const copy = document.querySelector('#copy');
 
 function restoran () {
   const cheki = vse.value - platK.value - yaChe.value - delChe.value - kidChe.value - svoyaChe.value;
@@ -132,4 +133,9 @@ function sms () {
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   sms();
+})
+
+copy.addEventListener('click', () => {
+  textArea.select()
+  document.execCommand('copy');
 })

@@ -60,7 +60,25 @@
   height: 600px;
 }
 
+.text-area:focus {
+  outline: none;
+}
+
 .label {
   font-weight: 700;
   font-size: 20px;
+}
+
+.button__copy {
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 130px;
+  height: 30px;
+}
+
+.button__copy:hover {
+  opacity: .8;
 }
