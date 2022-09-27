@@ -1,5 +1,5 @@
 const form = document.querySelector('.form');
-const textArea = document.querySelector('.text-area');
+let textArea = document.querySelector('#f1');
 const utro = document.querySelector('#utro');
 const den = document.querySelector('#den');
 const vech = document.querySelector('#vech');

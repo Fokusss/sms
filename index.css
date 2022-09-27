@@ -132,3 +132,21 @@ input::-webkit-inner-spin-button {
 .button__copy:hover {
   opacity: .7;
 }
+
+@media screen and (max-height: 850px) {
+  .form__text {
+    grid-auto-rows: 20px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .input__text {
+    font-size: 16px;
+  }
+
+  .input__text:focus, .mang:focus, .submit:focus {
+    border: 2px solid #4e457d;
+  }
+}
