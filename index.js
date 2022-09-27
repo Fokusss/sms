@@ -15,10 +15,10 @@ const delV = document.querySelector('#delV');
 const kidsV = document.querySelector('#kidsV');
 const svoyaV = document.querySelector('#svoyaV');
 const alcoG = document.querySelector('#alco');
-const dayS = document.querySelector('#dayS');
-const weekS = document.querySelector('#weekS');
-const monthS = document.querySelector('#monthS');
-const bkS = document.querySelector('#bkS');
+let dayS = document.querySelector('#dayS');
+let weekS = document.querySelector('#weekS');
+let monthS = document.querySelector('#monthS');
+let bkS = document.querySelector('#bkS');
 const manGS = document.querySelector('#manGS');
 const copy = document.querySelector('#copy');
 
@@ -91,7 +91,15 @@ function manG () {
   }
 }
 
+function sSs () {
+  dayS.value = (dayS.value).replace(/,/g, '.');
+  weekS.value = (weekS.value).replace(/,/g, '.');
+  monthS.value = (monthS.value).replace(/,/g, '.');
+  bkS.value = (bkS.value).replace(/,/g, '.');
+}
+
 function sms () {
+  sSs();
   const bkDat = new Date('September 11, 2018');
   const date = new Date();
   const bkYear = parseInt((date - bkDat) / 1000 / 60 / 60 / 24 / 365);
