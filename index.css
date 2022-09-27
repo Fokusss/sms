@@ -38,6 +38,8 @@
   border-radius: 5px;
   border: none;
   font-size: 22px;
+  background-color: #d3dfe6;
+  color: #4e457d;
 }
 
 .input__text:focus {
@@ -45,12 +47,41 @@
   border: 3px solid #4e457d;
 }
 
+.submit {
+  cursor: pointer;
+  background-color: #d3dfe6;
+  color: #4e457d;
+  border: none;
+  height: 25px;
+  transition: opacity .3s;
+}
 
+.submit:focus {
+  outline: none;
+  border: 3px solid #4e457d;
+}
+
+.submit:hover {
+  opacity: .7;
+}
 
 .mang {
   width: 208px;
   height: 25px;
   margin: 20px 0 0 0;
+  background-color: #d3dfe6;
+  color: #4e457d;
+  border: none;
+  transition: opacity .3s;
+}
+
+.mang:hover {
+  opacity: .7;
+}
+
+.mang:focus {
+  outline: none;
+  border: 3px solid #4e457d;
 }
 
 
@@ -58,6 +89,9 @@
   margin: 60px 0 0 0;
   width: 250px;
   height: 600px;
+  background-color: #d3dfe6;
+  border: none;
+  color:#4e457d;
 }
 
 .text-area:focus {
@@ -77,8 +111,12 @@
   display: block;
   width: 130px;
   height: 30px;
+  background-color: #d3dfe6;
+  color: #4e457d;
+  border: none;
+  transition: opacity .3s;
 }
 
 .button__copy:hover {
-  opacity: .8;
+  opacity: .7;
 }
