@@ -49,7 +49,7 @@ input::-webkit-inner-spin-button {
 
 .input__text:focus {
   outline: none;
-  border: 3px solid #4e457d;
+  border: 2px solid #4e457d;
 }
 
 .submit {
@@ -65,7 +65,7 @@ input::-webkit-inner-spin-button {
 
 .submit:focus {
   outline: none;
-  border: 3px solid #4e457d;
+  border: 2px solid #4e457d;
 }
 
 .submit:hover {
@@ -90,7 +90,7 @@ input::-webkit-inner-spin-button {
 
 .mang:focus {
   outline: none;
-  border: 3px solid #4e457d;
+  border: 2px solid #4e457d;
 }
 
 
@@ -144,10 +144,6 @@ input::-webkit-inner-spin-button {
 
   .input__text {
     font-size: 16px;
-  }
-
-  .input__text:focus, .mang:focus, .submit:focus {
-    border: 2px solid #4e457d;
   }
 
   .text-area {
