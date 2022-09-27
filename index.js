@@ -36,7 +36,7 @@ function keytering () {
     text += 0;
   } else {
     text += '\n';
-    text += '*Кидбург:*';
+    text += '*Кидбург:* ';
     const procent = kidsV.value / obj.value;
     text += `${kidChe.value} / ${new Intl.NumberFormat("ru", {style: "currency", currency: "RUB", minimumFractionDigits: 0}).format(kidsV.value)} / ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(procent)}`;
   }
