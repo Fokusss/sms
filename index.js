@@ -1,3 +1,8 @@
+const bkMonth = 46;
+const bkYear = 4;
+const sssYear = 19;
+
+
 const form = document.querySelector('.form');
 let textArea = document.querySelector('#f1');
 const utro = document.querySelector('#utro');
@@ -28,6 +33,14 @@ function restoran () {
   const procent = vsego / obj.value;
   const text = `${cheki} / ${new Intl.NumberFormat("ru", {style: "currency", currency: "RUB", minimumFractionDigits: 0}).format(vsego)} / ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(procent)}`;
   return text;
+}
+
+function prozrachnost() {
+  const s = document.querySelector('#sss');
+  const bk = document.querySelector('#bkM');
+  s.innerHTML+= ` (${sssYear})`;
+  bk.innerHTML+= ` (${bkMonth})`;
+
 }
 
 function keytering () {
@@ -102,9 +115,6 @@ function sms () {
   sSs();
   const bkDat = new Date('September 11, 2018');
   const date = new Date();
-  const bkYear = parseInt((date - bkDat) / 1000 / 60 / 60 / 24 / 365);
-  const bkMonth = parseInt((date - bkDat) / 1000 / 60 / 60 / 24 / 31 - 3);
-  console.log(bkYear, bkMonth)
   const inRes = restoran();
   const keyT= keytering();
   const agrE = agregators();
@@ -130,15 +140,16 @@ function sms () {
   textArea.textContent += '\n';
 
   textArea.textContent += `*Дельта к БК ${bkYear} год (${bkMonth}):* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(bkS.value/100)}\n`;
-  textArea.textContent += `*SSS(21) Day:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(dayS.value/100)}\n`;
-  textArea.textContent += `*SSS(21) Week:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(weekS.value/100)}\n`;
-  textArea.textContent += `*SSS(21) Month:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(monthS.value/100)}\n`;
+  textArea.textContent += `*SSS(${sssYear}) Day:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(dayS.value/100)}\n`;
+  textArea.textContent += `*SSS(${sssYear}) Week:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(weekS.value/100)}\n`;
+  textArea.textContent += `*SSS(${sssYear}) Month:* ${new Intl.NumberFormat("ru", {style: "percent", minimumFractionDigits: 1}).format(monthS.value/100)}\n`;
 
   textArea.textContent += '\n';
   textArea.textContent += `С уважением, ${manager}`
 }
 
 form.addEventListener('submit', (evt) => {
+  textArea.textContent = '';
   evt.preventDefault();
   sms();
 })
@@ -147,3 +158,8 @@ copy.addEventListener('click', () => {
   textArea.select()
   document.execCommand('copy');
 })
+
+
+
+
+prozrachnost();
