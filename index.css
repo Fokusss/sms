@@ -28,7 +28,7 @@ input::-webkit-inner-spin-button {
 }
 
 .form {
-  margin: 0 0 0 48px;
+  margin: 0 0px 0 48px;
 }
 
 .form__text {
@@ -149,4 +149,60 @@ input::-webkit-inner-spin-button {
   .text-area {
     margin-top: 30px;
   }
+}
+
+.author {
+  text-decoration: none;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: black;
+}
+
+.nast {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.pop-up {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left:0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop-up_active {
+  display: flex;
+}
+
+.pop-up__body {
+  border-radius: 20px;
+  width: 400px;
+  height: 330px;
+  background-color: #B6C9D5;
+  position: relative;
+  display: grid;
+  padding: 15px 0 0 12px;
+  box-sizing: border-box;
+  grid-template-columns: 100px 200px;
+  grid-auto-rows: 26px;
+  gap: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
 }

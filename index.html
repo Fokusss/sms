@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 
-
 <body class="page">
   <main class="main">
     <form class="form">
@@ -39,7 +38,7 @@
         <label class="label" for="svoya">Своя</label>
         <input class="input__text" id="svoyaV" type="text" autocomplete="off" name="svoya">
 
-        <label class="label" for="kids">Кидбург</label>
+        <label class="label" id="aa" for="kids">Кидбург</label>
         <input class="input__text" id="kidsV" type="text" autocomplete="off" name="kids">
       </div>
       <p class="title">Чеки</p>
@@ -59,7 +58,7 @@
         <label class="label" for="svoyaD">Своя</label>
         <input class="input__text" id="svoyaChe" type="text" autocomplete="off" name="svoyaD">
 
-        <label class="label" for="kid">Кидбург</label>
+        <label class="label" id="bb" for="kid">Кидбург</label>
         <input class="input__text" id="kidChe" type="text" autocomplete="off" name="kid">
       </div>
       <p id="sss" class="title">SSS</p>
@@ -78,9 +77,7 @@
       </div>
 
       <select class="mang" id="manGS" name="man">
-        <option value="lena">Стоянова Елена</option>
-        <option value="vlad">Бабкин Владислав</option>
-        <option value="arseniy">Сазонов Арсений</option>
+        
       </select>
 
       <button type="submit" class="submit">SMS</button>
@@ -90,8 +87,29 @@
       <button class="button__copy" id="copy" type="button">Копировать</button>
     </div>
 
+    <div class="pop-up">
+      <form class="pop-up__body">
+        <img src="./icons9.png" class="close" alt="close">
+        <label class="label" for="first">Зам. Дир</label>
+        <input class="input__text" id="mng1" type="text" autocomplete="off" name="first">
+        <label class="label" for="second">Зам. Дир</label>
+        <input class="input__text" id="mng2" type="text" autocomplete="off" name="second">
+        <label class="label" for="three">Зам. Дир</label>
+        <input class="input__text" id="mng3" type="text" autocomplete="off" name="three">
+        <label class="label" for="yearSsS">Год (SSS)</label>
+        <input class="input__text" id="yuer" type="text" autocomplete="off" name="yearSsS">
+        <label class="label" for="bkkMonth">БК Месяц</label>
+        <input class="input__text" id="bkkMonth" type="text" autocomplete="off" name="bkkMonth">
+        <label class="label" for="bkYI">БК Год</label>
+        <input class="input__text" id="bkYI" type="text" autocomplete="off" name="bkYI">
+        <label class="label" for="trueKeyt">Кейтеринг</label>
+        <input class="input__text" id="trueKeyt" type="text" placeholder="0 - off / 1 - on" name="trueKeyt">
+        <button class="button__copy" id="saveOpt" type="submit">Сохранить</button>
+      </form>
+    </div>
 
-
+    <img src="./icons8.png" class="nast" alt="options">
+    <a href="https://github.com/Fokusss" target="_blank" class="author">2022&#169; Fokusss</a>
   </main>
   <script src="./index.js"></script>
 </body>
